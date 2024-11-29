@@ -1,0 +1,3 @@
+Então, devido ao uso do aplicativo para Windows do GIT,
+não tive muita dificuldade, para mim o conceito é novo e nunca havia utilizado essa ferramenta antes,
+é um desafio até entender o que significa cada conceito. Entretanto, o git me ajudou a me organizar e também a salvar as alterações dos documentos e códigos.
