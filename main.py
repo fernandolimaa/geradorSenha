@@ -30,7 +30,7 @@ def converter():
 
         elif origem == "Metros" and destino == "Decímetros":
             resultado = valor * 10
-            
+
         elif origem == "Decímetros" and destino == "Metros":
             resultado = valor / 10
 
@@ -59,5 +59,49 @@ janela = tk.Tk()
 janela.title("Conversor de Unidades")
 
 
+# Campo de entrada do valor
+label_valor = tk.Label(janela, text="Digite o valor:")
+label_valor.pack()
+
+entry_valor = tk.Entry(janela, width=20)
+entry_valor.pack()
+
+# Combobox para unidades de origem
+label_origem = tk.Label(janela, text="Unidade de origem:")
+label_origem.pack()
+
+unidade_origem = ttk.Combobox(
+    janela, 
+    values=[
+        "Metros", "Quilômetros", "Centímetros", "Milímetros", "Decímetros",
+        "Litros", "Mililitros",
+        "Celsius", "Fahrenheit"
+    ]
+)
+unidade_origem.set("Metros")  # Definindo um valor padrão
+unidade_origem.pack()
+
+# Combobox para unidades de destino
+label_destino = tk.Label(janela, text="Unidade de destino:")
+label_destino.pack()
+
+unidade_destino = ttk.Combobox(
+    janela, 
+    values=[
+        "Metros", "Quilômetros", "Centímetros", "Milímetros", "Decímetros",
+        "Litros", "Mililitros",
+        "Celsius", "Fahrenheit"
+    ]
+)
+unidade_destino.set("Quilômetros")  # Definindo um valor padrão
+unidade_destino.pack()
+
+# Botão para realizar a conversão
+botao_converter = tk.Button(janela, text="Converter", command=converter)
+botao_converter.pack()
+
+# Rótulo para mostrar o resultado
+label_resultado = tk.Label(janela, text="Resultado: ")
+label_resultado.pack()
 
 janela.mainloop()
